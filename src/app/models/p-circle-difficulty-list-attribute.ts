@@ -1,12 +1,13 @@
-export interface PCircleDifficultyAttributeList {
+export interface PCircleDifficultyListAttribute {
+
   attr: [
     {synthesis: boolean}, // 総合力
-    {stair: [
-      isEnabled: boolean, // 属性に階段あるかないか
-      isSpiral: boolean, // 螺旋
-      isCrossed: boolean, // クロス
-      isDoubled: boolean, // 二重
-    ]}, // 階段
+    {stair: [ // 階段
+      {isEnabled: boolean}, // 属性に階段あるかないか
+      {isSpiral: boolean}, // 螺旋
+      {isCrossed: boolean}, // クロス
+      {isDoubled: boolean}, // 二重
+    ]},
     {chords: boolean}, // 同時押し
     {drumrolls: boolean}, // 交互連打
     {scattering: boolean}, // 乱打
@@ -20,9 +21,10 @@ export interface PCircleDifficultyAttributeList {
     {soflans: boolean}, // ソフラン
     {strictTiming: boolean}, // 辛判定
     {elbow: boolean}, // 無理押し
-    {strictGauge: [
-      isEnabled: boolean, // 属性に辛ゲージあるかないか
-      isSlightly: boolean, // 微辛
-    ]}, // 辛ゲージ
+    {strictGauge: [ // 辛ゲージ
+      {isEnabled: boolean}, // 属性に辛ゲージあるかないか
+      {isSlightly: boolean}, // 微辛
+    ]},
   ];
+
 }

@@ -1,6 +1,6 @@
-import { PCircleDifficultyAttributeList } from './p-circle-difficulty-attribute-list';
+import { PCircleDifficultyListAttribute } from './p-circle-difficulty-list-attribute';
 
-export interface PCircleDifficultyList extends PCircleDifficultyAttributeList {
+export interface PCircleDifficultyList extends PCircleDifficultyListAttribute {
   lv: number;
   name: string;
   link: string;
