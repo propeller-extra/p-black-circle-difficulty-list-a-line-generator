@@ -8,10 +8,12 @@ import { ALineGeneratorFormComponent } from './components/a-line-generator-form/
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// material UI
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
 
+// firebase
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 
