@@ -5,10 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { ALineGeneratorFormComponent } from './components/a-line-generator-form/a-line-generator-form.component';
 
 const routes: Routes = [
-/*
   { path: 'index', component: ALineGeneratorFormComponent },
   { path: '', redirectTo: '/index', pathMatch: 'prefix' },
-  */
 ];
 
 @NgModule({

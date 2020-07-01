@@ -1,3 +1,20 @@
-<router-outlet></router-outlet>
-
-<app-a-line-generator-form></app-a-line-generator-form>
+<main>
+  <div class="container" fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="space-between">
+    <div class="wrapper">
+      <h1 class="title">ポップンwiki Lv間目安難易度表 ラインジェネレータ</h1>
+      <div class="explanation">
+        <h4>How to Use ?</h4>
+        <div class="list-wrapper">
+          <ol>
+            <li>レベル、曲名、曲ページのURLをそれぞれ入力</li>
+            <li>チェックボックスで譜面の属性を指定</li>
+            <li>テキストボックスをクリックで内容をコピー！</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</main>
