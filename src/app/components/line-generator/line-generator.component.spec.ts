@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ALineGeneratorFormComponent } from './a-line-generator-form.component';
+import { LineGeneratorComponent } from './line-generator.component';
 
-describe('ALineGeneratorFormComponent', () => {
-  let component: ALineGeneratorFormComponent;
-  let fixture: ComponentFixture<ALineGeneratorFormComponent>;
+describe('LineGeneratorFormComponent', () => {
+  let component: LineGeneratorComponent;
+  let fixture: ComponentFixture<LineGeneratorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ALineGeneratorFormComponent ]
+      declarations: [ LineGeneratorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ALineGeneratorFormComponent);
+    fixture = TestBed.createComponent(LineGeneratorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,11 +2,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PCircleDifficultyList } from '../../models/p-circle-difficulty-list';
 
 @Component({
-  selector: 'app-a-line-generator-form',
-  templateUrl: './a-line-generator-form.component.html',
-  styleUrls: ['./a-line-generator-form.component.sass'],
+  selector: 'app-line-generator',
+  templateUrl: './line-generator.component.html',
+  styleUrls: ['./line-generator.component.sass'],
 })
-export class ALineGeneratorFormComponent implements OnInit {
+export class LineGeneratorComponent implements OnInit {
 
   public pCircleDifficultyList: PCircleDifficultyList = {
     lv: undefined,
