@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('p-black-circle-difficulty-list-a-line-generator app is running!');
+    expect(page.getTitleText()).toEqual('p-difficulty-list-line-generator app is running!');
   });
 
   afterEach(async () => {

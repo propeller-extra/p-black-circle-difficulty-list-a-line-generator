@@ -16,11 +16,11 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'p-black-circle-difficulty-list-a-line-generator'`, () => {
+  it(`should have as title 'p-difficulty-list-line-generator'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual(
-      'p-black-circle-difficulty-list-a-line-generator'
+      'p-difficulty-list-line-generator'
     );
   });
 
@@ -29,7 +29,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain(
-      'p-black-circle-difficulty-list-a-line-generator app is running!'
+      'p-difficulty-list-line-generator app is running!'
     );
   });
 });

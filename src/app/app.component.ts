@@ -7,7 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent implements OnInit {
-  title = 'p-black-circle-difficulty-list-a-line-generator';
+  title = 'p-difficulty-list-line-generator';
   loginForm: FormGroup;
 
   ngOnInit(): void {

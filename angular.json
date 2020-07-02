@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "p-black-circle-difficulty-list-a-line-generator": {
+    "p-difficulty-list-line-generator": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/p-black-circle-difficulty-list-a-line-generator",
+            "outputPath": "dist/p-difficulty-list-line-generator",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "p-black-circle-difficulty-list-a-line-generator:build"
+            "browserTarget": "p-difficulty-list-line-generator:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "p-black-circle-difficulty-list-a-line-generator:build:production"
+              "browserTarget": "p-difficulty-list-line-generator:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "p-black-circle-difficulty-list-a-line-generator:build"
+            "browserTarget": "p-difficulty-list-line-generator:build"
           }
         },
         "test": {
@@ -117,18 +117,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "p-black-circle-difficulty-list-a-line-generator:serve"
+            "devServerTarget": "p-difficulty-list-line-generator:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "p-black-circle-difficulty-list-a-line-generator:serve:production"
+              "devServerTarget": "p-difficulty-list-line-generator:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "p-black-circle-difficulty-list-a-line-generator",
+  "defaultProject": "p-difficulty-list-line-generator",
   "cli": {
     "analytics": false
   }
