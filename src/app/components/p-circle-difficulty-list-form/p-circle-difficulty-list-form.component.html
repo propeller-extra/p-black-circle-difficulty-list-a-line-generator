@@ -1,27 +1,50 @@
 <div class="container" fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="space-between">
-  <div class="wrapper" fxFlex="100%">
-    <h1 class="title">ポップンwiki Lv間目安難易度表 ラインジェネレータ</h1>
-    <div class="explanation">
-      <h4>How to Use ?</h4>
-      <div class="list-wrapper">
-        <ol>
-          <li>レベル、曲名、曲ページのURLをそれぞれ入力</li>
-          <li>チェックボックスで譜面の属性を指定</li>
-          <li>テキストボックスをクリックで内容をコピー！</li>
-        </ol>
-      </div>
+    <div class="wrapper top-wrapper" fxFlex="100%">
+        <h1 class="title">ポップンwiki Lv間目安難易度表 ラインジェネレータ</h1>
+        <div class="explanation">
+            <h4>How to Use ?</h4>
+            <div class="list-wrapper">
+                <ol>
+                    <li>レベル、曲名(ジャンル名)、曲ページのURLをそれぞれ入力</li>
+                    <li>チェックボックスで譜面の属性を指定</li>
+                    <li>テキストボックスをクリックで内容をコピー！</li>
+                </ol>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="wrapper" fxFlex="100%">
-    <div class="lv-name-link-form" fxFlex="33%" fxFlex.md="100%">
-      lv, name, link
+    <div class="wrapper main-wrapper" fxFlex="100%">
+        <div class="p-circle-difficulty-list-form" fxFlex="66%" fxFlex.md="100%">
+            <div class="info-field" fxFlex="50%" fxFlex.md="100%">
+                <mat-form-field>
+                    <mat-label>Lv</mat-label>
+                    <input matInput value="">
+                    <mat-hint>例: 48</mat-hint>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput value="">
+                    <mat-hint>例: 未完成ノ蒸氣驅動乙女(EX)</mat-hint>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Link</mat-label>
+                    <input matInput value="">
+                    <mat-hint>例: 難易度表:未完成ノ蒸氣驅動乙女_ex</mat-hint>
+                </mat-form-field>
+            </div>
+            <div class="attribute-field" fxFlex="50%" fxFlex.md="100%">
+                <h1>属性</h1>
+                <mat-selection-list #items>
+                    <mat-list-option *ngFor="let attr of pCircleDifficultyList.attr">
+                        {{items}}
+                    </mat-list-option>
+                </mat-selection-list>
+                <pre>{{pCircleDifficultyList|json}}</pre>
+            </div>
+        </div>
+        <div class="output-textarea-block" fxFlex="33%" fxFlex.md="100%">
+            <h1>Output textarea</h1>
+            <p>todo: another component inlude here.</p>
+            <textarea name="" id="" cols="30" rows="10" readonly></textarea>
+        </div>
     </div>
-    <div class="attribute-field" fxFlex="33%" fxFlex.md="100%">
-      <h1>attribute</h1>
-      <pre>{{pCircleDifficultyList|json}}</pre>
-    </div>
-    <div class="output-textarea-block" fxFlex="33%" fxFlex.md="100%">
-      <textarea name="" id="" cols="30" rows="10" readonly></textarea>
-    </div>
-  </div>
 </div>

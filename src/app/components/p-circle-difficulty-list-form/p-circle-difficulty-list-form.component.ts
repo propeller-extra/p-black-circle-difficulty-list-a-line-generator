@@ -25,13 +25,13 @@ export class PCircleDifficultyListFormComponent implements OnInit {
 
     // 動作確認
     for (const key of Object.getOwnPropertyNames(this.pCircleDifficultyList.attr)) {
-      console.log(this.pCircleDifficultyList.attr[key]);
       console.log(key);
+      console.log(this.pCircleDifficultyList.attr[key]);
     }
     for (const firstKey of Object.getOwnPropertyNames(this.pCircleDifficultyList.attrInDetail)) {
       for (const secondKey of Object.getOwnPropertyNames(this.pCircleDifficultyList.attrInDetail[firstKey])) {
-        console.log(this.pCircleDifficultyList.attrInDetail[firstKey][secondKey]);
         console.log(firstKey, secondKey);
+        console.log(this.pCircleDifficultyList.attrInDetail[firstKey][secondKey]);
       }
     }
   }

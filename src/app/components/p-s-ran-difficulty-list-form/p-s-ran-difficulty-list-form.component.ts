@@ -16,5 +16,14 @@ export class PSRanDifficultyListFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.pSRanDifficultyList = new PSRanDifficultyList();
+
+    // 動作確認
+    for (const key of Object.getOwnPropertyNames(this.pSRanDifficultyList.attr)) {
+      console.log(key);
+      console.log(this.pSRanDifficultyList.attr[key]);
+    }
+    this.pSRanDifficultyList.mainAttr.forEach(mainAttr => {
+      console.log(mainAttr);
+    });
   }
 }
