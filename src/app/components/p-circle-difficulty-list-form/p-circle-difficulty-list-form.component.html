@@ -14,15 +14,11 @@
   </div>
   <div class="wrapper" fxFlex="100%">
     <div class="lv-name-link-form" fxFlex="33%" fxFlex.md="100%">
-      <form>
-        <mat-form-field>
-          <input matInput>
-        </mat-form-field>
-      </form>
       lv, name, link
     </div>
     <div class="attribute-field" fxFlex="33%" fxFlex.md="100%">
       <h1>attribute</h1>
+      <pre>{{pCircleDifficultyList|json}}</pre>
     </div>
     <div class="output-textarea-block" fxFlex="33%" fxFlex.md="100%">
       <textarea name="" id="" cols="30" rows="10" readonly></textarea>

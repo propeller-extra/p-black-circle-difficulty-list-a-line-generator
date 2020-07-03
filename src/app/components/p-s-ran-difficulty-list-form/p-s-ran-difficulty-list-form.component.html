@@ -1,1 +1,27 @@
-<p>p-s-ran-difficulty-list-form works!</p>
+<div class="container" fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="space-between">
+  <div class="wrapper" fxFlex="100%">
+    <h1 class="title">ポップンwiki S乱難易度表 ラインジェネレータ</h1>
+    <div class="explanation">
+      <h4>How to Use ?</h4>
+      <div class="list-wrapper">
+        <ol>
+          <li>レベル、曲名、曲ページのURLをそれぞれ入力</li>
+          <li>チェックボックスで譜面の属性を指定</li>
+          <li>テキストボックスをクリックで内容をコピー！</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper" fxFlex="100%">
+    <div class="lv-name-link-form" fxFlex="33%" fxFlex.md="100%">
+      lv, name, link
+    </div>
+    <div class="attribute-field" fxFlex="33%" fxFlex.md="100%">
+      <h1>attribute</h1>
+      <pre>{{pSRanDifficultyList|json}}</pre>
+    </div>
+    <div class="output-textarea-block" fxFlex="33%" fxFlex.md="100%">
+      <textarea name="" id="" cols="30" rows="10" readonly></textarea>
+    </div>
+  </div>
+</div>
