@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // imports class
-import { PCircleDifficultyList } from '../../models/class/p-circle-difficulty-list';
+import { PCircleDifficultyList } from '../../models/p-circle-difficulty-list';
 
 @Component({
   selector: 'app-p-circle-difficulty-list-form',
@@ -24,15 +24,8 @@ export class PCircleDifficultyListFormComponent implements OnInit {
     this.pCircleDifficultyList = new PCircleDifficultyList();
 
     // 動作確認
-    for (const key of Object.getOwnPropertyNames(this.pCircleDifficultyList.attr)) {
-      console.log(key);
-      console.log(this.pCircleDifficultyList.attr[key]);
-    }
-    for (const firstKey of Object.getOwnPropertyNames(this.pCircleDifficultyList.attrInDetail)) {
-      for (const secondKey of Object.getOwnPropertyNames(this.pCircleDifficultyList.attrInDetail[firstKey])) {
-        console.log(firstKey, secondKey);
-        console.log(this.pCircleDifficultyList.attrInDetail[firstKey][secondKey]);
-      }
+    for (const hoge of this.pCircleDifficultyList.attr) {
+      console.log(hoge.showName);
     }
   }
 }

@@ -33,9 +33,9 @@
             </div>
             <div class="attribute-field" fxFlex="50%" fxFlex.md="100%">
                 <h1>属性</h1>
-                <mat-selection-list #items>
+                <mat-selection-list>
                     <mat-list-option *ngFor="let attr of pCircleDifficultyList.attr">
-                        {{items}}
+                        {{attr.showName}}
                     </mat-list-option>
                 </mat-selection-list>
                 <pre>{{pCircleDifficultyList|json}}</pre>
