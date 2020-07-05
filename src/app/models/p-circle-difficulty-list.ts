@@ -22,9 +22,21 @@ export class PCircleDifficultyList{
         showName: '階段',
         isEnabled: false,
         attrInDetail: [
-          { isSpiral: false }, // 螺旋
-          { isCrossed: false }, // クロス
-          { isDoubled: false }, // 二重
+          {
+            propertyName: 'isSpiral',
+            showName: '螺旋',
+            isEnabled: false,
+          },
+          {
+            propertyName: 'isCrossed',
+            showName: 'クロス',
+            isEnabled: false,
+          },
+          {
+            propertyName: 'isDoubled',
+            showName: '二重',
+            isEnabled: false,
+          },
         ],
       },
       {
@@ -110,7 +122,11 @@ export class PCircleDifficultyList{
         showName: '辛ゲージ',
         isEnabled: false,
         attrInDetail: [
-          { isSlightly: false }, // 微辛
+          {
+            propertyName: 'isSlightly',
+            showName: '微辛',
+            isEnabled: false,
+          },
         ],
       },
     ];

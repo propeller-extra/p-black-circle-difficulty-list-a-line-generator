@@ -12,12 +12,6 @@ export class PCircleDifficultyListFormComponent implements OnInit {
 
   public pCircleDifficultyList: PCircleDifficultyList;
 
-  /* Viewする時に使えそうな処理
-    for (const key of Object.getOwnPropertyNames(this.pCircleDifficultyList.attr)) {
-      this.pCircleDifficultyList.attr[key] = false;
-    }
-  */
-
   constructor() {}
 
   ngOnInit(): void {
