@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 // imports class
 import { PCircleDifficultyList } from '../../models/p-circle-difficulty-list';
@@ -8,6 +8,7 @@ import { PCircleDifficultyList } from '../../models/p-circle-difficulty-list';
   templateUrl: './p-circle-difficulty-list-form.component.html',
   styleUrls: ['./p-circle-difficulty-list-form.component.sass'],
 })
+
 export class PCircleDifficultyListFormComponent implements OnInit {
 
   public pCircleDifficultyList: PCircleDifficultyList;

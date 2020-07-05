@@ -5,6 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 
 const modules = [
@@ -14,6 +15,7 @@ const modules = [
   ClipboardModule,
   MatRadioModule,
   MatCardModule,
+  MatButtonToggleModule,
 ];
 
 @NgModule({

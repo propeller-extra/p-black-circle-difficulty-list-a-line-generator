@@ -23,18 +23,39 @@ export class PCircleDifficultyList{
         isEnabled: false,
         attrInDetail: [
           {
+            propertyName: 'default',
+            showName: '一般',
+            afterConversionName: '',
+            isEnabled: false,
+          },
+          {
             propertyName: 'isSpiral',
             showName: '螺旋',
+            afterConversionName: '螺',
             isEnabled: false,
           },
           {
             propertyName: 'isCrossed',
             showName: 'クロス',
+            afterConversionName: 'X',
+            isEnabled: false,
+          },
+          {
+            propertyName: 'isMultiple',
+            showName: '多重',
+            afterConversionName: '重',
             isEnabled: false,
           },
           {
             propertyName: 'isDoubled',
             showName: '二重',
+            afterConversionName: '二',
+            isEnabled: false,
+          },
+          {
+            propertyName: 'isTriple',
+            showName: '三重',
+            afterConversionName: '三',
             isEnabled: false,
           },
         ],
@@ -43,7 +64,20 @@ export class PCircleDifficultyList{
         propertyName: 'chords',
         showName: '同時押し',
         isEnabled: false,
-        attrInDetail: [],
+        attrInDetail: [
+          {
+            propertyName: 'default',
+            showName: '一般',
+            afterConversionName: '',
+            isEnabled: false,
+          },
+          {
+            propertyName: 'isTrident',
+            showName: '三角押し',
+            afterConversionName: '三',
+            isEnabled: false,
+          },
+        ],
       },
       {
         propertyName: 'drumrolls',
@@ -123,8 +157,15 @@ export class PCircleDifficultyList{
         isEnabled: false,
         attrInDetail: [
           {
+            propertyName: 'default',
+            showName: '辛ゲージ',
+            afterConversionName: '',
+            isEnabled: false,
+          },
+          {
             propertyName: 'isSlightly',
-            showName: '微辛',
+            showName: '微辛ゲージ',
+            afterConversionName: '微',
             isEnabled: false,
           },
         ],

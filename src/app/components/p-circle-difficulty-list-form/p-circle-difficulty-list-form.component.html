@@ -13,46 +13,49 @@
         </div>
     </div>
     <div class="wrapper main-wrapper" fxFlex="100%">
-        <div class="p-circle-difficulty-list-form" fxFlex="66%" fxFlex.md="100%">
-            <div class="info-field" fxFlex="50%" fxFlex.md="100%">
+        <div class="p-circle-difficulty-list-form" fxFlex="50%" fxFlex.md="100%" fxLayoutGap="20px">
+            <div class="info-field">
                 <h1>曲の一般情報</h1>
-                <mat-form-field>
+                <mat-form-field class="mat-form-field">
                     <mat-label>Lv</mat-label>
                     <input type="number" min="29" max="50" matInput [(ngModel)]="pCircleDifficultyList.lv">
                     <mat-hint>例: 48</mat-hint>
                 </mat-form-field>
-                <mat-form-field>
+                <br/>
+                <mat-form-field class="mat-form-field">
                     <mat-label>Name</mat-label>
                     <input type="text" matInput [(ngModel)]="pCircleDifficultyList.name">
                     <mat-hint>例: 未完成ノ蒸氣驅動乙女(EX)</mat-hint>
                 </mat-form-field>
-                <mat-form-field>
+                <br />
+                <mat-form-field class="mat-form-field">
                     <mat-label>Link</mat-label>
                     <input type="text" matInput [(ngModel)]="pCircleDifficultyList.link">
                     <mat-hint>例: 難易度表:未完成ノ蒸氣驅動乙女_ex</mat-hint>
                 </mat-form-field>
+                <br />
             </div>
-            <div class="attribute-field" fxFlex="50%" fxFlex.md="100%">
+            <div class="attribute-field">
                 <h1>属性</h1>
                 <mat-card class="attribute-card" *ngFor="let attr of pCircleDifficultyList.attr">
-                    <mat-selection-list #selected>
+                    <mat-selection-list class="attribute-selection-list" #selected>
                         <mat-list-option>
                             {{attr.showName}}
                         </mat-list-option>
                     </mat-selection-list>
-                    <mat-radio-group aria-label="">
-                        <mat-radio-button *ngFor="let attrInDetail of attr.attrInDetail" [value]="attrInDetail">
+                    <mat-button-toggle-group class="attribute-button-toggle-group" aria-label="" *ngIf="attr.attrInDetail.length > 0">
+                        <mat-button-toggle *ngFor="let attrInDetail of attr.attrInDetail" [value]="attrInDetail.isEnabled">
                             {{attrInDetail.showName}}
-                        </mat-radio-button>
-                    </mat-radio-group>
+                        </mat-button-toggle>
+                    </mat-button-toggle-group>
                 </mat-card>
                 <pre>{{pCircleDifficultyList|json}}</pre>
             </div>
         </div>
-        <div class="output-textarea-block" fxFlex="33%" fxFlex.md="100%">
+        <div class="output-textarea-block" fxFlex="50%" fxFlex.md="100%">
             <h1>出力結果</h1>
-            <p>todo: another component inlude here.</p>
             <textarea id="clipboard-textarea" cols="30" rows="10" readonly></textarea>
+            <button>Copy text</button>
         </div>
     </div>
 </div>

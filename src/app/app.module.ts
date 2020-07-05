@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Components
 import { AppComponent } from './app.component';
-import { LineGeneratorComponent } from './components/line-generator/line-generator.component';
 import { PCircleDifficultyListFormComponent } from './components/p-circle-difficulty-list-form/p-circle-difficulty-list-form.component';
 import { PSRanDifficultyListFormComponent } from './components/p-s-ran-difficulty-list-form/p-s-ran-difficulty-list-form.component';
 import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
@@ -24,7 +23,6 @@ import { AngularFireModule } from '@angular/fire';
 @NgModule({
   declarations: [
     AppComponent,
-    LineGeneratorComponent,
     PCircleDifficultyListFormComponent,
     PSRanDifficultyListFormComponent,
     PageNotFoundComponent,
