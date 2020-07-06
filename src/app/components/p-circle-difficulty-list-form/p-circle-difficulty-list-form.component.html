@@ -21,7 +21,7 @@
                     <input type="number" min="29" max="50" matInput [(ngModel)]="pCircleDifficultyList.lv">
                     <mat-hint>例: 48</mat-hint>
                 </mat-form-field>
-                <br/>
+                <br />
                 <mat-form-field class="mat-form-field">
                     <mat-label>Name</mat-label>
                     <input type="text" matInput [(ngModel)]="pCircleDifficultyList.name">
@@ -38,23 +38,32 @@
             <div class="attribute-field">
                 <h1>属性</h1>
                 <mat-card class="attribute-card" *ngFor="let attr of pCircleDifficultyList.attr">
-                    <mat-selection-list class="attribute-selection-list" #selected>
-                        <mat-list-option>
-                            {{attr.showName}}
-                        </mat-list-option>
-                    </mat-selection-list>
-                    <mat-button-toggle-group class="attribute-button-toggle-group" aria-label="" *ngIf="attr.attrInDetail.length > 0">
-                        <mat-button-toggle *ngFor="let attrInDetail of attr.attrInDetail" [value]="attrInDetail.isEnabled">
-                            {{attrInDetail.showName}}
-                        </mat-button-toggle>
-                    </mat-button-toggle-group>
+                    <mat-checkbox class="attribute-checkbox" [(ngModel)]="attr.isEnabled">
+                        {{attr.showName}}
+                    </mat-checkbox>
+                    <br>
+                    <mat-form-field appearance="fill" *ngIf="attr.attrInDetail.length > 0">
+                        <mat-label>詳細属性を指定</mat-label>
+                        <mat-select [(ngModel)]="attr.selectedAttrInDetail">
+                            <mat-option>未指定</mat-option>
+                            <mat-option *ngFor="let attrInDetail of attr.attrInDetail" [value]="attrInDetail.propertyName">
+                                {{attrInDetail.showName}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <p>{{attr.selectedAttrInDetail}}</p>
                 </mat-card>
                 <pre>{{pCircleDifficultyList|json}}</pre>
             </div>
         </div>
         <div class="output-textarea-block" fxFlex="50%" fxFlex.md="100%">
             <h1>出力結果</h1>
-            <textarea id="clipboard-textarea" cols="30" rows="10" readonly></textarea>
+            <mat-form-field class="clipboard-textarea-field" appearance="fill">
+                <mat-label>変換内容がここに表示されるよ！</mat-label>
+                <textarea matInput id="clipboard-textarea" cols="30" rows="10" readonly>
+
+                </textarea>
+            </mat-form-field>
             <button>Copy text</button>
         </div>
     </div>

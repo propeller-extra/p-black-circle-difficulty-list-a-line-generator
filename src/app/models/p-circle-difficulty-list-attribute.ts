@@ -5,4 +5,5 @@ export class PCircleDifficultyListAttribute {
   readonly showName: string; // viewに表示する時に使う日本語名
   isEnabled: boolean; // viewでチェックしたかどうか
   attrInDetail: PCircleDifficultyListAttributeInDetail[]; // 二重階段、螺旋階段、クロス階段などの詳細属性がある時に使うプロパティ
+  selectedAttrInDetail: string; // viewで選択したattrInDetailのpropertyNameが入る
 }
