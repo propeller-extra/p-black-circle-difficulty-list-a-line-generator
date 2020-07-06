@@ -58,15 +58,7 @@
             </div>
         </div>
         <div class="clipboard-container" fxFlex="50%" fxFlex.md="100%">
-            <h1>出力結果</h1>
-            <mat-form-field class="clipboard-textarea-field" appearance="fill">
-                <mat-label>変換内容がここに表示されるよ！</mat-label>
-                <textarea matInput id="clipboard-textarea" cols="30" rows="10" [(ngModel)]="copyText"></textarea>
-            </mat-form-field>
-            <section class="clipboard-btn-block">
-                <button class="clipboard-btn" id="output-text-btn" mat-raised-button (click)="outputTextBtnOnClick()" color="primary">テキストを出力</button>
-                <button class="clipboard-btn" id="copy-text-btn" mat-raised-button [cdkCopyToClipboard]="copyText" color="accent">内容をコピー</button>
-            </section>
+            <app-p-circle-difficulty-list-line-generator [pCircleDifficultyList]="pCircleDifficultyList"></app-p-circle-difficulty-list-line-generator>
         </div>
     </div>
 </div>

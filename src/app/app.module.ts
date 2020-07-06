@@ -7,7 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 // Components
 import { AppComponent } from './app.component';
 import { PCircleDifficultyListFormComponent } from './components/p-circle-difficulty-list-form/p-circle-difficulty-list-form.component';
+import { PCircleDifficultyListLineGeneratorComponent } from './components/p-circle-difficulty-list-line-generator/p-circle-difficulty-list-line-generator.component';
 import { PSRanDifficultyListFormComponent } from './components/p-s-ran-difficulty-list-form/p-s-ran-difficulty-list-form.component';
+import { PSRanDifficultyListLineGeneratorComponent } from './components/p-s-ran-difficulty-list-line-generator/p-s-ran-difficulty-list-line-generator.component';
 import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
 
 // material UI
@@ -26,6 +28,8 @@ import { AngularFireModule } from '@angular/fire';
     PCircleDifficultyListFormComponent,
     PSRanDifficultyListFormComponent,
     PageNotFoundComponent,
+    PCircleDifficultyListLineGeneratorComponent,
+    PSRanDifficultyListLineGeneratorComponent,
   ],
   imports: [
     BrowserModule,
