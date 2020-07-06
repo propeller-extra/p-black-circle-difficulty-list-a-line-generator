@@ -1,9 +1,9 @@
-<div class="container" fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="space-between">
+<div class="container" fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center">
   <div class="wrapper top-wrapper" fxFlex="100%">
-    <h1 class="title">ポップンwiki S乱難易度表 ラインジェネレータ</h1>
+    <h1 class="title">S乱難易度表 ラインジェネレータ</h1>
     <div class="explanation">
       <h4>How to Use ?</h4>
-      <div class="list-wrapper">
+      <div class="list-wrapper" fxLayoutAlign="space-around">
         <ol>
           <li>曲の一般情報を入力</li>
           <li>チェックボックスから譜面の属性を指定</li>
@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="wrapper main-wrapper" fxFlex="100%">
-    <div class="p-s-ran-difficulty-list-form" fxFlex="50%" fxFlex.md="100%">
+    <div class="p-s-ran-difficulty-list-form" fxFlex.lg="50%" fxFlex.md="100%" fxLayoutGap="20px">
       <div class="info-field">
         <h1>曲の一般情報</h1>
         <mat-form-field>
@@ -48,14 +48,18 @@
             {{attr.showName}}
           </mat-checkbox>
           <br/>
-          <mat-checkbox class="attribute-important-checkbox" [(ngModel)]="attr.isImportantAttr">
+          <mat-checkbox class="attribute-important-checkbox" [(ngModel)]="attr.isImportantAttr" [disabled]="!attr.isEnabled">
             主要属性
           </mat-checkbox>
         </mat-card>
       </div>
     </div>
-    <div class="clipboard-container" fxFlex="50%" fxFlex.md="100%">
+    <div class="clipboard-container" fxFlex.lg="50%" fxFlex.md="100%" fxLayoutGap="20px">
       <app-p-s-ran-difficulty-list-line-generator [pSRanDifficultyList]="pSRanDifficultyList"></app-p-s-ran-difficulty-list-line-generator>
     </div>
+  </div>
+  <div class="footer" fxFlexAlign="center" fxLayoutGap="20px">
+    <a class="github-repository-link" mat-stroked-button href="https://github.com/propeller-extra/p-difficulty-list-line-generator">Github Repository</a>
+    <a mat-flat-button href="/p-circle" color="primary">P●LV間ラインジェネレータはこちら</a>
   </div>
 </div>

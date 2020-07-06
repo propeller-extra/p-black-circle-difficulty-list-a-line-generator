@@ -29,7 +29,7 @@ export class PSRanDifficultyListLineGeneratorComponent implements OnInit {
 
     // attr and isImportantAttr
     this.pSRanDifficultyList.attr.forEach(attr => {
-      if (attr.isImportantAttr) {
+      if (attr.isImportantAttr && attr.isEnabled) {
         lineText += '@gold:';
       }
 

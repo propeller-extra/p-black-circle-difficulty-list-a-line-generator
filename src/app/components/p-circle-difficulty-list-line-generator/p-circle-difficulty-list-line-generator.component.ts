@@ -31,7 +31,7 @@ export class PCircleDifficultyListLineGeneratorComponent implements OnInit {
 
     // for attr of OBJECT
     this.pCircleDifficultyList.attr.forEach(attr => {
-      if (attr.selectedAttrInDetail != null) {
+      if ((attr.selectedAttrInDetail != null) && (attr.isEnabled)) {
         // propertynameを愚直に探索
         attr.attrInDetail.forEach(attrInDetail => {
           if (attr.selectedAttrInDetail === attrInDetail.propertyName) {

@@ -1,9 +1,9 @@
-<div class="container" fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="space-between">
+<div class="container" fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center">
     <div class="wrapper top-wrapper" fxFlex="100%">
-        <h1 class="title">ポップンwiki Lv間目安難易度表 ラインジェネレータ</h1>
+        <h1 class="title">Lv間目安難易度表 ラインジェネレータ</h1>
         <div class="explanation">
             <h4>How to Use ?</h4>
-            <div class="list-wrapper">
+            <div class="list-wrapper" fxLayoutAlign="space-around">
                 <ol>
                     <li>曲の一般情報を入力</li>
                     <li>チェックボックスから譜面の属性を指定</li>
@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="wrapper main-wrapper" fxFlex="100%">
-        <div class="p-circle-difficulty-list-form" fxFlex="50%" fxFlex.md="100%" fxLayoutGap="20px">
+        <div class="p-circle-difficulty-list-form" fxFlex.lg="50%" fxFlex.md="100%" fxLayoutGap="20px">
             <div class="info-field">
                 <h1>曲の一般情報</h1>
                 <mat-form-field class="mat-form-field">
@@ -55,8 +55,12 @@
                 </mat-card>
             </div>
         </div>
-        <div class="clipboard-container" fxFlex="50%" fxFlex.md="100%">
+        <div class="clipboard-container" fxFlex.lg="50%" fxFlex.md="100%" fxLayoutGap="20px">
             <app-p-circle-difficulty-list-line-generator [pCircleDifficultyList]="pCircleDifficultyList"></app-p-circle-difficulty-list-line-generator>
         </div>
+    </div>
+    <div class="footer" fxFlexAlign="center" fxLayoutGap="20px">
+        <a class="github-repository-link" mat-stroked-button href="https://github.com/propeller-extra/p-difficulty-list-line-generator">Github Repository</a>
+        <a mat-flat-button href="/s-ran" color="primary">S乱ラインジェネレータはこちら</a>
     </div>
 </div>
