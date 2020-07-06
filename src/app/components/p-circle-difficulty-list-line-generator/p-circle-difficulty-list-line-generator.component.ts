@@ -10,26 +10,45 @@ import { PCircleDifficultyList } from '../../models/p-circle-difficulty-list';
 })
 export class PCircleDifficultyListLineGeneratorComponent implements OnInit {
 
-  public outputText: string;
+  public outputText: string; // viewのtextareaに表示される値
 
   // 例のオブジェクトをInputする
   @Input() pCircleDifficultyList: PCircleDifficultyList;
 
   public outputTextBtnOnClick(): void {
 
-    let lineText: string; // このメソッド内で作成される1行のテキスト。この値をoutputTextにぶち込む。
-
-    lineText = '';
+    let lineText = '|'; // このメソッド内で作成される1行のテキスト。この値をoutputTextにぶち込む。
 
     // lvが入力されているかどうか判定
+    if (this.pCircleDifficultyList.lv == null) {
+      lineText += ' ::: |';
+    } else {
+      lineText += this.pCircleDifficultyList.lv.toString() + '|';
+    }
 
-    // link
-
-    // name
+    // link and name
+    lineText += '[[' + this.pCircleDifficultyList.link + '|' + this.pCircleDifficultyList.name + ']]|';
 
     // for attr of OBJECT
+    this.pCircleDifficultyList.attr.forEach(attr => {
+      if (attr.selectedAttrInDetail != null) {
+        // propertynameを愚直に探索
+        attr.attrInDetail.forEach(attrInDetail => {
+          if (attr.selectedAttrInDetail === attrInDetail.propertyName) {
+            lineText += attrInDetail.afterConversionName + '|'; // propertyNameが一致したらそのオブジェクトから一文字を引き出す
+            return;
+          }
+        });
+      } else {
+        if (attr.isEnabled) {
+          lineText += '◯|';
+        } else {
+          lineText += ' |';
+        }
+      }
+    });
 
-    this.outputText = 'あほ';
+    this.outputText = lineText;
   }
 
   constructor() { }
