@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 // imports class
 import { PCircleDifficultyList } from '../../models/p-circle-difficulty-list';
@@ -16,10 +16,5 @@ export class PCircleDifficultyListFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.pCircleDifficultyList = new PCircleDifficultyList();
-
-    // 動作確認
-    for (const hoge of this.pCircleDifficultyList.attr) {
-      console.log(hoge.showName);
-    }
   }
 }

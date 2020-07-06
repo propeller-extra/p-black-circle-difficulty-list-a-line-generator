@@ -16,10 +16,5 @@ export class PSRanDifficultyListFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.pSRanDifficultyList = new PSRanDifficultyList();
-
-    // 動作確認
-    for (const hoge of this.pSRanDifficultyList.attr) {
-      console.log(hoge.propertyName);
-    }
   }
 }

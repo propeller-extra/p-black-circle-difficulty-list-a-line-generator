@@ -13,44 +13,49 @@
     </div>
   </div>
   <div class="wrapper main-wrapper" fxFlex="100%">
-    <div class="p-s-ran-difficulty-list-form" fxFlex="66%" fxFlex.md="100%">
-      <div class="info-field" fxFlex="50%" fxFlex.md="100%">
+    <div class="p-s-ran-difficulty-list-form" fxFlex="50%" fxFlex.md="100%">
+      <div class="info-field">
         <h1>曲の一般情報</h1>
         <mat-form-field>
           <mat-label>Lv</mat-label>
           <input type="number" min="29" max="50" matInput [(ngModel)]="pSRanDifficultyList.lv">
           <mat-hint>例: 48</mat-hint>
         </mat-form-field>
+        <br/>
         <mat-form-field>
           <mat-label>Name</mat-label>
           <input type="text" matInput [(ngModel)]="pSRanDifficultyList.name">
           <mat-hint>例: 未完成ノ蒸氣驅動乙女(EX)</mat-hint>
         </mat-form-field>
+        <br/>
         <mat-form-field>
           <mat-label>Link</mat-label>
           <input type="text" matInput [(ngModel)]="pSRanDifficultyList.link">
           <mat-hint>例: 難易度表:未完成ノ蒸氣驅動乙女_ex</mat-hint>
         </mat-form-field>
+        <br/>
         <mat-form-field>
           <mat-label>BPM</mat-label>
-          <input type="number" min="1" max="9999" matInput [(ngModel)]="pSRanDifficultyList.bpm">
+          <input type="text" matInput [(ngModel)]="pSRanDifficultyList.bpm">
           <mat-hint>例: 170</mat-hint>
         </mat-form-field>
+        <br/>
       </div>
-      <div class="attribute-field" fxFlex="50%" fxFlex.md="100%">
+      <div class="attribute-field">
         <h1>属性</h1>
-        <mat-select>
-          <mat-option *ngFor="let attr of pSRanDifficultyList.attr">
+        <mat-card class="attribute-card" *ngFor="let attr of pSRanDifficultyList.attr">
+          <mat-checkbox class="attribute-checkbox" [(ngModel)]="attr.isEnabled" color="warn">
             {{attr.showName}}
-          </mat-option>
-        </mat-select>
-        <pre>{{pSRanDifficultyList|json}}</pre>
+          </mat-checkbox>
+          <br/>
+          <mat-checkbox class="attribute-important-checkbox" [(ngModel)]="attr.isImportantAttr">
+            主要属性
+          </mat-checkbox>
+        </mat-card>
       </div>
     </div>
-    <div class="output-textarea-block" fxFlex="33%" fxFlex.md="100%">
-      <h1>出力結果</h1>
-      <p>todo: another component inlude here.</p>
-      <textarea name="clipboard-textarea" id="" cols="30" rows="10" readonly></textarea>
+    <div class="clipboard-container" fxFlex="50%" fxFlex.md="100%">
+      <app-p-s-ran-difficulty-list-line-generator [pSRanDifficultyList]="pSRanDifficultyList"></app-p-s-ran-difficulty-list-line-generator>
     </div>
   </div>
 </div>

@@ -4,7 +4,7 @@ export class PSRanDifficultyList {
   lv: number;
   name: string;
   link: string;
-  bpm: number;
+  bpm: string;
   attr: PCircleDifficultyListAttribute[];
 
   constructor() {
