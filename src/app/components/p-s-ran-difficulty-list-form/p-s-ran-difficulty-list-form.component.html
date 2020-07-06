@@ -39,11 +39,11 @@
       </div>
       <div class="attribute-field" fxFlex="50%" fxFlex.md="100%">
         <h1>属性</h1>
-        <mat-selection-list>
-          <mat-list-option *ngFor="let attr of pSRanDifficultyList.attr">
+        <mat-select>
+          <mat-option *ngFor="let attr of pSRanDifficultyList.attr">
             {{attr.showName}}
-          </mat-list-option>
-        </mat-selection-list>
+          </mat-option>
+        </mat-select>
         <pre>{{pSRanDifficultyList|json}}</pre>
       </div>
     </div>

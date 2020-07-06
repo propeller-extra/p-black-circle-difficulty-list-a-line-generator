@@ -38,7 +38,7 @@
             <div class="attribute-field">
                 <h1>属性</h1>
                 <mat-card class="attribute-card" *ngFor="let attr of pCircleDifficultyList.attr">
-                    <mat-checkbox class="attribute-checkbox" [(ngModel)]="attr.isEnabled">
+                    <mat-checkbox class="attribute-checkbox" [(ngModel)]="attr.isEnabled" color="warn">
                         {{attr.showName}}
                     </mat-checkbox>
                     <br>
@@ -46,7 +46,8 @@
                         <mat-label>詳細属性を指定</mat-label>
                         <mat-select [(ngModel)]="attr.selectedAttrInDetail">
                             <mat-option>未指定</mat-option>
-                            <mat-option *ngFor="let attrInDetail of attr.attrInDetail" [value]="attrInDetail.propertyName">
+                            <mat-option *ngFor="let attrInDetail of attr.attrInDetail"
+                                [value]="attrInDetail.propertyName">
                                 {{attrInDetail.showName}}
                             </mat-option>
                         </mat-select>
@@ -56,15 +57,16 @@
                 <pre>{{pCircleDifficultyList|json}}</pre>
             </div>
         </div>
-        <div class="output-textarea-block" fxFlex="50%" fxFlex.md="100%">
+        <div class="clipboard-container" fxFlex="50%" fxFlex.md="100%">
             <h1>出力結果</h1>
             <mat-form-field class="clipboard-textarea-field" appearance="fill">
                 <mat-label>変換内容がここに表示されるよ！</mat-label>
-                <textarea matInput id="clipboard-textarea" cols="30" rows="10" readonly>
-
-                </textarea>
+                <textarea matInput id="clipboard-textarea" cols="30" rows="10" [(ngModel)]="copyText"></textarea>
             </mat-form-field>
-            <button>Copy text</button>
+            <section class="clipboard-btn-block">
+                <button class="clipboard-btn" id="output-text-btn" mat-raised-button (click)="outputTextBtnOnClick()" color="primary">テキストを出力</button>
+                <button class="clipboard-btn" id="copy-text-btn" mat-raised-button [cdkCopyToClipboard]="copyText" color="accent">内容をコピー</button>
+            </section>
         </div>
     </div>
 </div>

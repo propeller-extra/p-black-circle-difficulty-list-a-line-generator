@@ -10,9 +10,14 @@ import { PCircleDifficultyListAttribute } from '../../models/p-circle-difficulty
   styleUrls: ['./p-circle-difficulty-list-form.component.sass'],
 })
 export class PCircleDifficultyListFormComponent implements OnInit {
+
   public pCircleDifficultyList: PCircleDifficultyList;
 
-  public selectedValue: any;
+  public copyText: string;
+
+  public outputTextBtnOnClick(): void {
+    this.copyText = 'あほ';
+  }
 
   constructor() {}
 

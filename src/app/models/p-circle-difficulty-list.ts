@@ -25,27 +25,27 @@ export class PCircleDifficultyList{
         attrInDetail: [
           {
             propertyName: 'isSpiral',
-            showName: '螺旋',
+            showName: '螺旋階段',
             afterConversionName: '螺',
           },
           {
             propertyName: 'isCrossed',
-            showName: 'クロス',
+            showName: 'クロス階段',
             afterConversionName: 'X',
           },
           {
             propertyName: 'isMultiple',
-            showName: '多重',
+            showName: '多重階段',
             afterConversionName: '重',
           },
           {
             propertyName: 'isDoubled',
-            showName: '二重',
+            showName: '二重階段',
             afterConversionName: '二',
           },
           {
             propertyName: 'isTriple',
-            showName: '三重',
+            showName: '三重階段',
             afterConversionName: '三',
           },
         ],

@@ -5,6 +5,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
 
 const modules = [
   MatInputModule,
@@ -13,6 +14,7 @@ const modules = [
   MatCardModule,
   MatCheckboxModule,
   MatSelectModule,
+  MatButtonModule,
 ];
 
 @NgModule({
