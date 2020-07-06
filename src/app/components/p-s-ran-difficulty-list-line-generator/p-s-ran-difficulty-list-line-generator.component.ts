@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 // imports class
 import { PSRanDifficultyList } from '../../models/p-s-ran-difficulty-list';
+import { PSRanDifficultyListLvAllColors } from '../../models/p-s-ran-difficulty-list-lv-all-clolors';
 
 @Component({
   selector: 'app-p-s-ran-difficulty-list-line-generator',
@@ -11,13 +12,16 @@ import { PSRanDifficultyList } from '../../models/p-s-ran-difficulty-list';
 export class PSRanDifficultyListLineGeneratorComponent implements OnInit {
 
   public outputText: string; // viewのtextareaに表示される値
+  private pSRanDifficultyListLvAllColors: PSRanDifficultyListLvAllColors;
 
   @Input() pSRanDifficultyList: PSRanDifficultyList;
 
   public outputTextBtnOnClick(): void {
     let lineText = '|'; // このメソッド内で作成される1行のテキスト。この値をoutputTextにぶち込む。
 
-    // TODO colorの情報を追加
+    // lv color
+    lineText += this.pSRanDifficultyListLvAllColors.colors[this.pSRanDifficultyList.lv] + ':';
+
     // lv
     lineText += this.pSRanDifficultyList.lv.toString() + '|';
 
@@ -45,6 +49,7 @@ export class PSRanDifficultyListLineGeneratorComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
-
+  ngOnInit(): void {
+    this.pSRanDifficultyListLvAllColors = new PSRanDifficultyListLvAllColors();
+  }
 }

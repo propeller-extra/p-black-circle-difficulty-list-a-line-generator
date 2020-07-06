@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/p-difficulty-list-line-generator",
     "ignore": [
       "firebase.json",
       "**/.*",
