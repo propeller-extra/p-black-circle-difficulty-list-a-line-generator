@@ -7,7 +7,7 @@
         <ol>
           <li>曲の一般情報を入力</li>
           <li>チェックボックスから譜面の属性を指定</li>
-          <li>テキストボックスをクリックで内容をコピー！</li>
+          <li>「テキストを出力」、「内容をコピー」でクリップボードへコピー</li>
         </ol>
       </div>
     </div>
@@ -23,13 +23,13 @@
         </mat-form-field>
         <br/>
         <mat-form-field>
-          <mat-label>Name</mat-label>
+          <mat-label>曲名(またはジャンル名)</mat-label>
           <input type="text" matInput [(ngModel)]="pSRanDifficultyList.name">
           <mat-hint>例: 未完成ノ蒸氣驅動乙女(EX)</mat-hint>
         </mat-form-field>
         <br/>
         <mat-form-field>
-          <mat-label>Link</mat-label>
+          <mat-label>曲ページの内部リンク(「難易度表: 」から始まる任意のテキスト)</mat-label>
           <input type="text" matInput [(ngModel)]="pSRanDifficultyList.link">
           <mat-hint>例: 難易度表:未完成ノ蒸氣驅動乙女_ex</mat-hint>
         </mat-form-field>
