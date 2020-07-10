@@ -79,6 +79,13 @@ export class PCircleDifficultyList{
         selectedAttrInDetail: undefined,
       },
       {
+        propertyName: 'axis',
+        showName: '軸押し',
+        isEnabled: false,
+        attrInDetail: [],
+        selectedAttrInDetail: undefined,
+      },
+      {
         propertyName: 'jackhammers',
         showName: '縦連打',
         isEnabled: false,
