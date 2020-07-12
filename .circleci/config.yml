@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   deploy_dev: # ジョブ名
     docker:
-      - image: circleci/node@1.1.6 # ジョブ実行環境のDockerイメージを記述
+      - image: circleci/node:1.1.6 # ジョブ実行環境のDockerイメージを記述
     steps:
       - checkout # ソースコードのチェックアウト
       - run: # 順に実行したいコマンドとコマンドに名前をつけます
