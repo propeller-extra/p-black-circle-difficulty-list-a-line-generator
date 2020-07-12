@@ -6,168 +6,324 @@ export class PCircleDifficultyList{
   link: string;
   attr: PCircleDifficultyListAttribute[];
 
-  constructor() {
+  constructor(switchModelName: string) {
     this.lv = undefined;
     this.name = '';
     this.link = '';
-    this.attr = [
-      {
-        propertyName: 'synthesis',
-        showName: '総合力',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'stair',
-        showName: '階段',
-        isEnabled: false,
-        attrInDetail: [
-          {
-            propertyName: 'isSpiral',
-            showName: '螺旋階段',
-            afterConversionName: '螺',
-          },
-          {
-            propertyName: 'isCrossed',
-            showName: 'クロス階段',
-            afterConversionName: 'X',
-          },
-          {
-            propertyName: 'isMultiple',
-            showName: '多重階段',
-            afterConversionName: '重',
-          },
-          {
-            propertyName: 'isDoubled',
-            showName: '二重階段',
-            afterConversionName: '二',
-          },
-          {
-            propertyName: 'isTriple',
-            showName: '三重階段',
-            afterConversionName: '三',
-          },
-        ],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'chords',
-        showName: '同時押し',
-        isEnabled: false,
-        attrInDetail: [
-          {
-            propertyName: 'isTrident',
-            showName: '三角押し',
-            afterConversionName: '三',
-          },
-        ],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'drumrolls',
-        showName: '交互連打',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'scattering',
-        showName: '乱打',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'axis',
-        showName: '軸押し',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'jackhammers',
-        showName: '縦連打',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'hardest',
-        showName: '発狂',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'lastHardest',
-        showName: 'ラス殺し',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'oneHand',
-        showName: '片手処理',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'swing',
-        showName: '左右振り',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'deviation',
-        showName: 'ズレ押し',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'stamina',
-        showName: '体力',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'soflans',
-        showName: 'ソフラン',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'strictTiming',
-        showName: '辛判定',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'elbow',
-        showName: '無理押し',
-        isEnabled: false,
-        attrInDetail: [],
-        selectedAttrInDetail: undefined,
-      },
-      {
-        propertyName: 'strictGauge',
-        showName: '辛ゲージ',
-        isEnabled: false,
-        attrInDetail: [
-          {
-            propertyName: 'isSlightly',
-            showName: '微辛ゲージ',
-            afterConversionName: '微',
-          },
-        ],
-        selectedAttrInDetail: undefined,
-      },
-    ];
+    this.attr = [];
+    if (switchModelName === 'white') { // ○難易度表
+      this.attr = [
+        {
+          propertyName: 'synthesis',
+          showName: '総合力',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'stair',
+          showName: '階段',
+          isEnabled: false,
+          attrInDetail: [
+            {
+              propertyName: 'isSpiral',
+              showName: '螺旋階段',
+              afterConversionName: '螺',
+            },
+            {
+              propertyName: 'isCrossed',
+              showName: 'クロス階段',
+              afterConversionName: 'X',
+            },
+            {
+              propertyName: 'isMultiple',
+              showName: '多重階段',
+              afterConversionName: '重',
+            },
+            {
+              propertyName: 'isDoubled',
+              showName: '二重階段',
+              afterConversionName: '二',
+            },
+            {
+              propertyName: 'isTriple',
+              showName: '三重階段',
+              afterConversionName: '三',
+            },
+          ],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'chords',
+          showName: '同時押し',
+          isEnabled: false,
+          attrInDetail: [
+            {
+              propertyName: 'isTrident',
+              showName: '三角押し',
+              afterConversionName: '三',
+            },
+          ],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'drumrolls',
+          showName: '交互連打',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'scattering',
+          showName: '乱打',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'axis',
+          showName: '軸押し',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'jackhammers',
+          showName: '縦連打',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'hardest',
+          showName: '発狂',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'lastHardest',
+          showName: 'ラス殺し',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'oneHand',
+          showName: '片手処理',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'swing',
+          showName: '左右振り',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'deviation',
+          showName: 'ズレ押し',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'stamina',
+          showName: '体力',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'soflans',
+          showName: 'ソフラン',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'strictTiming',
+          showName: '辛判定',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'elbow',
+          showName: '無理押し',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'strictGauge',
+          showName: '辛ゲージ',
+          isEnabled: false,
+          attrInDetail: [
+            {
+              propertyName: 'isSlightly',
+              showName: '微辛ゲージ',
+              afterConversionName: '微',
+            },
+          ],
+          selectedAttrInDetail: undefined,
+        },
+      ];
+    } else if (switchModelName === 'black') { // ●難易度表
+      this.attr = [
+        {
+          propertyName: 'synthesis',
+          showName: '総合力',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'stair',
+          showName: '階段',
+          isEnabled: false,
+          attrInDetail: [
+            {
+              propertyName: 'isSpiral',
+              showName: '螺旋階段',
+              afterConversionName: '螺',
+            },
+            {
+              propertyName: 'isCrossed',
+              showName: 'クロス階段',
+              afterConversionName: 'X',
+            },
+            {
+              propertyName: 'isMultiple',
+              showName: '多重階段',
+              afterConversionName: '重',
+            },
+            {
+              propertyName: 'isDoubled',
+              showName: '二重階段',
+              afterConversionName: '二',
+            },
+            {
+              propertyName: 'isTriple',
+              showName: '三重階段',
+              afterConversionName: '三',
+            },
+          ],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'chords',
+          showName: '同時押し',
+          isEnabled: false,
+          attrInDetail: [
+            {
+              propertyName: 'isTrident',
+              showName: '三角押し',
+              afterConversionName: '三',
+            },
+          ],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'drumrolls',
+          showName: '交互連打',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'scattering',
+          showName: '乱打',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'jackhammers',
+          showName: '縦連打',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'hardest',
+          showName: '発狂',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'lastHardest',
+          showName: 'ラス殺し',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'oneHand',
+          showName: '片手処理',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'swing',
+          showName: '左右振り',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'deviation',
+          showName: 'ズレ押し',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'stamina',
+          showName: '体力',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'soflans',
+          showName: 'ソフラン',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'strictTiming',
+          showName: '辛判定',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'elbow',
+          showName: '無理押し',
+          isEnabled: false,
+          attrInDetail: [],
+          selectedAttrInDetail: undefined,
+        },
+        {
+          propertyName: 'strictGauge',
+          showName: '辛ゲージ',
+          isEnabled: false,
+          attrInDetail: [
+            {
+              propertyName: 'isSlightly',
+              showName: '微辛ゲージ',
+              afterConversionName: '微',
+            },
+          ],
+          selectedAttrInDetail: undefined,
+        },
+      ];
+    }
   }
 }

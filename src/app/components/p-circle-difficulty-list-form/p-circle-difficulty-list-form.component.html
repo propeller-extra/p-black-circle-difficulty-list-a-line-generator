@@ -12,6 +12,14 @@
             </div>
         </div>
     </div>
+    <div class="wrapper switch-model-wrapper" fxFlex="100%">
+        <div class="switch-mode-buttons-block" fxLayoutAlign="center">
+            <mat-button-toggle-group appearance="legacy">
+                <mat-button-toggle value="white" checked="true" (change)="switchUsingModel('white')">○難易度表</mat-button-toggle>
+                <mat-button-toggle value="black" (change)="switchUsingModel('black')">●難易度表</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+    </div>
     <div class="wrapper main-wrapper" fxFlex="100%">
         <div class="p-circle-difficulty-list-form" fxFlex.lg="50%" fxFlex.md="100%" fxLayoutGap="20px">
             <div class="info-field">

@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 const modules = [
   MatInputModule,
@@ -15,6 +16,7 @@ const modules = [
   MatCheckboxModule,
   MatSelectModule,
   MatButtonModule,
+  MatButtonToggleModule,
 ];
 
 @NgModule({
